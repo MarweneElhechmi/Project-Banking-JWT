@@ -1,0 +1,61 @@
+<form #f="ngForm" (ngSubmit)="OuvrirCompte(f.value)" class="mt-2">
+<!--<form #f="ngForm" (ngSubmit)="OuvrirCompteModel()" class="mt-2">-->
+
+  <!--  DIV 1 -->
+  <div class="form-group">
+<label for="numero">Numéro de compte</label>
+<input type="text" class="form-control" [(ngModel)]="compte.numero" ngModel name="numero" #numero="ngModel" minlength="3" placeholder="Numéro de Compte" id="numero" required>
+
+<div *ngIf="numero.invalid && (numero.dirty || numero.touched)" class="alert alert-danger">
+       <div *ngIf="numero?.errors['required']">
+           Numero is required.
+         </div>
+         <div *ngIf="numero?.errors.minlength">
+             Name must be at least 3 characters long.
+           </div>
+           </div>
+
+  </div>
+
+
+
+<!--  DIV 2 -->
+  <div class="form-group">
+    <label for="prop">Nom du propriétaire</label>
+    <input type="text" class="form-control" [(ngModel)]="compte.proprietaire" ngModel name="proprietaire" #prop="ngModel" minlength="3" placeholder="Nom du Propriétaire" id="prop" required>
+    <div *ngIf="prop.invalid && (prop.dirty || prop.touched)" class="alert alert-danger">
+        <div *ngIf="prop?.errors['required']">
+            Name is required.
+          </div>
+          <div *ngIf="prop?.errors.minlength">
+              Name must be at least 3 characters long.
+            </div>
+            </div>
+
+  </div>
+
+  <!--  DIV 3 -->
+  <div class="form-group">
+
+      <label for="solde">Solde</label>
+      <input type="number" class="form-control" [(ngModel)]="compte.solde" ngModel name="solde" #solde="ngModel" placeholder="Numéro de Compte" id="solde" required>
+      <div *ngIf="solde.invalid && (solde.dirty || solde.touched)" class="alert alert-danger">
+          <div *ngIf="solde?.errors['required']">
+              Solde is required.
+            </div>
+
+              </div>
+  </div>
+
+  <!--  DIV 4 -->
+  <div class="form-group">
+
+    <button [disabled]="!f.valid" type="submit" class="btn btn-success">Ouvrir Compte</button>
+
+     </div>
+
+
+
+
+</form>
+

@@ -1,0 +1,53 @@
+
+<div [@routerTransition]>
+<form #f="ngForm" (ngSubmit)="onSubmit()" class="mt-2">
+  <!--<form #f="ngForm" (ngSubmit)="OuvrirCompteModel()" class="mt-2">-->
+
+    <!--  DIV 1 -->
+    <div class="form-group">
+  <label for="username">Nom de l'Utilisateur</label>
+  <input type="text" class="form-control" [(ngModel)]="user.username" ngModel name="username" #username="ngModel" minlength="3" placeholder="Nom de l'Utilisateur" id="username" required>
+
+  <div *ngIf="username.invalid && (username.dirty || username.touched)" class="alert alert-danger">
+         <div *ngIf="username?.errors['required']">
+             Username is required.
+           </div>
+           <div *ngIf="username?.errors.minlength">
+               Username must be at least 3 characters long.
+             </div>
+             </div>
+
+    </div>
+
+
+
+  <!--  DIV 2 -->
+    <div class="form-group">
+      <label for="pass">Password</label>
+      <input type="text" class="form-control" [(ngModel)]="user.password" ngModel name="pass" #pass="ngModel" minlength="3" placeholder="Password" id="pass" required>
+      <div *ngIf="pass.invalid && (pass.dirty || pass.touched)" class="alert alert-danger">
+          <div *ngIf="pass?.errors['required']">
+              Password is required.
+            </div>
+            <div *ngIf="pass?.errors.minlength">
+                Password must be at least 3 characters long.
+              </div>
+              </div>
+
+    </div>
+
+
+    <!--  DIV 3 -->
+    <div class="form-group">
+
+      <button [disabled]="!f.valid" type="submit" class="btn btn-primary">Login</button>
+
+       </div>
+
+
+
+
+  </form>
+</div>
+
+
