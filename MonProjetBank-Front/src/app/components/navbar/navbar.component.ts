@@ -22,6 +22,9 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
   }
+  isLoggedIn():boolean{
+    return this.authenticationService.isLoggedIn();
+  }
 
   onLogOut(){
     this.loading = true;
@@ -30,5 +33,9 @@ export class NavbarComponent implements OnInit {
 
 }
 
+getJwtSuject():string{
+
+return this.authenticationService.getJwtSuject();
+}
 
 }

@@ -16,7 +16,7 @@ const routes: Routes = [
     {path:"list",component: ComptesListComponent,canActivate:[AuthGuard]},
     {path:"logout",component: WelcomeComponent,resolve:[LogoutResolver]},
     {path:"add",component: AddCompteComponent},
-    {path:"welcome",component: WelcomeComponent,resolve:[LogoutResolver]},
+    {path:"welcome",component: WelcomeComponent},
     {path:"login",component: LoginComponent},
     {path:"delete/:numero",component: DeleteCompteComponent},
     {path:"",redirectTo:"/welcome" ,pathMatch:'full'},

@@ -3,8 +3,8 @@
 ![Screenshot from running application](etc/screenshot-jwt-spring-security-demo.png?raw=true "Screenshot JWT Spring Security Demo")
 
 ## About
-This is just a simple demo for using **JWT (JSON Web Token)** with **Spring Security** and
-**Spring Boot**. This solution is partially based on the blog entry
+This is just a simple demo for using **JSON Web Token (JWT)** with **Spring Security** and
+**Spring Boot 2**. This solution is partially based on the blog entry
 [REST Security with JWT using Java and Spring Security](https://www.toptal.com/java/rest-security-with-jwt-spring-security-and-java)
 and the demo project [Cerberus](https://github.com/brahalla/Cerberus). Thanks to the authors!
 
@@ -60,6 +60,12 @@ spring:
 
 You can find a reference of all application properties [here](http://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html).
 
+### Using Flyway
+
+https://github.com/szerhusenBC/jwt-spring-security-demo/issues/81
+
+## Docker
+This project has a docker image. You can find it at [https://hub.docker.com/r/hubae/jwt-spring-security-demo/](https://hub.docker.com/r/hubae/jwt-spring-security-demo/).
 
 ## Questions
 If you have project related questions please take a look at the [past questions](https://github.com/szerhusenBC/jwt-spring-security-demo/issues?utf8=%E2%9C%93&q=is%3Aissue%20is%3Aopen%2Cclosed%20label%3Aquestion%20) or create a new ticket with your question.
@@ -71,6 +77,7 @@ Sorry for that but I'm very busy right now and don't have much time.
 ## Interesting projects
 
 * [spring-security-pac4j](https://github.com/pac4j/spring-security-pac4j) a Spring Boot integration for Pac4j (a Java security engine that covers JWT beside others)
+* For more complex microservice environments take a look here: [Using JWT with Spring Security OAuth](http://www.baeldung.com/spring-security-oauth-jwt)
 
 ## External resources
 
